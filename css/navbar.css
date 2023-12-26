@@ -1,0 +1,485 @@
+  /* Top of navbar */
+nav{
+  background-color: var(--white);
+  position: sticky;
+  top: 54.25px;
+  left: 0;
+  z-index: 3;
+  border-bottom: solid 1.5px rgba(218, 218, 218, 0.692);
+}
+nav > div.mainbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 68px;
+  text-align: right;
+  margin: 0px auto 0px auto;
+  box-sizing: border-box;
+  padding: 17px 16px;
+  position: relative;
+}
+nav > div.mainbar > img {
+  display: inline-block;
+  margin: 0 0 0 20px ;
+}
+nav > div.mainbar > div.input-group{
+  width: 600px;
+  height: 44px;
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+}
+nav > div.mainbar > div.input-group input{
+  padding: 0 50px;
+  box-sizing: border-box;
+  width: 540px;
+  height: inherit;
+  background-color: var(--white2);
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  color: #252525;
+  transition: 1000ms;
+  font-size: 15px;
+  caret-color: var(--digi-red);
+}
+nav > div.mainbar > div.input-group input::placeholder{
+  font-size: 12px;
+  font-family: IranyekanM;
+  color: var(--placeholder-color);
+}
+nav > div.mainbar > div.input-group input:focus {
+  width: 600px;
+  outline: unset;
+}
+nav > div.mainbar > div.input-group input:focus ~ span.toggle > span {
+  color: #252525;
+}
+nav > div.mainbar > div.input-group > .toggle{
+  position: absolute;
+  right: 17px;
+  top: 13px;
+  cursor: pointer;
+  z-index: 9;
+}
+nav > div.mainbar > div.input-group > .toggle > span{
+  transition: 400ms;
+  color: var(--icon-grey);
+  font-size: 18px;
+}
+
+/*                  User Account                              */
+
+nav > div.mainbar  input[type="radio"]{
+  display: none;
+}
+nav > div.mainbar > div.useraccount{
+  position: absolute;
+  width: 125px;
+  height: 44px;
+  left: 15px;
+  top: 18px;
+}
+nav > div.mainbar > div.useraccount > label{
+  display: inline-block;
+  width: 60px;
+  height: 40px;
+}
+nav > div.mainbar > div.useraccount > label > div.useracc{
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 60px;
+  height: 40px;
+  position: relative;
+  top: 3px;
+  left: 1px;
+  cursor: pointer;
+}
+nav > div.mainbar > div.useraccount > label > div.useracc > span.fa-user{
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  right: 4px;
+  top: 1px;
+  font-weight: 400;
+  font-size: 20px;
+  color: #424750;
+}
+nav > div.mainbar > div.useraccount > label > div.useracc > span.fa-caret-down{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  position: absolute;
+  top: 11px;
+  left: 0;
+  color: #424750;
+}
+nav > div.mainbar > div.useraccount > label[for="closes"]{
+  display: none;
+}
+nav > div.mainbar > div.useraccount > input[id="open"]:checked ~ label[for="open"]{
+  display: none;
+}
+nav > div.mainbar > div.useraccount > input[id="open"]:checked ~ label[for="closes"] {
+  display: block;
+}
+nav > div.mainbar > div.useraccount > input[id="open"]:checked ~ label[for="closes"] > div.useracc {
+  background-color: #FDEBED;
+}
+nav > div.mainbar > div.useraccount > input[id="open"]:checked ~ label[for="closes"] ~ div.acc{
+  display: block;
+}
+nav > div.mainbar > div.useraccount > div.acc {
+  width: 256px;
+  height: 366.55px;
+  position: absolute;
+  left: calc(50% + 3px);
+  top: 100%;
+  box-shadow: 0 1px 1px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.3);
+  border-radius: 8px;
+  background-color: var(--white);
+  z-index: 3;
+  display: none;
+}
+nav > div.mainbar > div.useraccount > div.acc > ul{
+  width: inherit;
+  list-style: none;
+}
+nav > div.mainbar > div.useraccount > div.acc > ul > li{
+  width: inherit;
+  height: 49.05px;
+  line-height: 49.05px;
+  color: #424750;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 16px;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  transition: 300ms;
+}
+nav > div.mainbar > div.useraccount > div.acc > ul > li > div:not(.first){
+  display: inline-block;
+  width: 80%;
+  height: inherit;
+  border-bottom: 1px solid var(--white2);
+}
+nav > div.mainbar > div.useraccount > div.acc > ul > li > img{
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 8px;
+  right: 3px;
+  margin-left: 15px;
+}
+nav > div.mainbar > div.useraccount > div.acc > ul > li > span.num{
+  position: absolute;
+  left: 47px;
+  top: 0;
+}
+nav > div.mainbar > div.useraccount > div.acc > ul > li > span.low{
+  position: absolute;
+  left: 16px;
+  top: 0;
+  color: var(--icon-grey);
+  font-size: 11px;
+  font-weight: 500;
+}
+nav > div.mainbar > div.useraccount > div.acc > ul > li:hover{
+  background-color: var(--white2);
+}
+nav > div.mainbar > div.useraccount > div.acc > ul > li:first-of-type{
+  height: 65.05px;
+  border-radius: 8px 8px 0 0;
+  padding: unset;
+  box-sizing: unset;
+}
+nav > div.mainbar > div.useraccount > div.acc > ul > li:first-of-type > div.first{
+  color: #424750;
+  font-size: 15px;
+  width: 90%;
+  height: inherit;
+  line-height: 65.05px;
+  margin: 0 auto;
+  position: relative;
+  border-bottom: 1px solid var(--border-color);
+}
+nav > div.mainbar > div.useraccount > div.acc > ul > li:first-of-type > div > img{
+  width: 31px;
+  height: 31px;
+  margin-left: 4px;
+  position: relative;
+  top: 12px;
+  right: 2px;
+}
+nav > div.mainbar > div.useraccount > div.cart{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: -10px;
+  top: 12px;
+  cursor: pointer;
+}
+nav > div.mainbar > div.useraccount > div.cart > span{
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #424750;
+}
+nav > div.mainbar > div.useraccount > div.cart::before{
+  content: " ";
+  display: block;
+  background-color: var(--border-color);
+  width: 1px;
+  height: 24px;
+  position: absolute;
+  top: 9px;
+  left: 63px;
+  transform: translateY(-50%);
+}
+/* Manu Bar  */
+
+nav > div.menubar {
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+}
+
+
+/*---------------------------------------- Mega Menu --------------------------------------------------------------------*/
+nav > div.menubar > ul.mega{
+  display: inline-block;
+  width: 14%;
+  height: inherit;
+  vertical-align: top;
+  text-align: right;
+  padding: 0 30px;
+  box-sizing: border-box;
+  line-height: 40px;
+  list-style: none;
+}
+nav > div.menubar > ul.mega > li{
+  cursor: pointer;
+  font-size: 15.5px;
+  color: #424750;
+  font-family: IranyekanB;
+}
+nav > div.menubar > ul.mega > li > span{
+  margin-left: 7px;
+  color: #424750;
+}
+nav > div.menubar > ul.mega > li > div.submenu{
+  z-index: 2;
+  width: 100%;
+  right: calc(50% - 1479px/2 );
+  height: 520px;
+  box-sizing: border-box;
+  background-color: var(--white);
+  position: absolute;
+  display: none;
+  margin-right: 60.9px;
+}
+nav > div.menubar > ul.mega > li:hover > div.submenu{
+  display: block;
+}
+nav > div.menubar > ul.mega > li > div.submenu > ul{
+  direction: ltr;
+  width: 15%;
+  height: inherit;
+  padding: 10px 10px 10px 0;
+  box-sizing: border-box;
+  list-style: none;
+  overflow: auto;
+  border-left:1px solid var(--white2);
+}
+nav > div.menubar > ul.mega > li > div.submenu > ul > li{
+  width: 100%;
+  height: 60px;
+  font-size: 13px;
+  line-height: 60px;
+  font-family: IranyekanB;
+}
+nav > div.menubar > ul.mega > li > div.submenu > ul > li:hover{
+  background-color: #F7F7F8;
+  color: var(--digi-red);
+  transition: 1000ms;
+}
+nav > div.menubar > ul.mega > li > div.submenu > ul > li > span{
+  margin-left: 4px;
+  margin-right: 1px;
+  font-size: 15px;
+}
+nav > div.menubar > ul.mega > li > div.submenu > ul > li.mobile > div.mobile , nav > div.menubar > ul.mega > li > div.submenu > ul > li.digital > div.digital , nav > div.menubar > ul.mega > li > div.submenu > ul > li.tool > div.tool , nav > div.menubar > ul.mega > li > div.submenu > ul > li.shirt > div.shirt  , nav > div.menubar > ul.mega > li > div.submenu > ul > li.super > div.super , nav > div.menubar > ul.mega > li > div.submenu > ul > li.kids > div.kids , nav > div.menubar > ul.mega > li > div.submenu > ul > li.product > div.product , nav > div.menubar > ul.mega > li > div.submenu > ul > li.beauty > div.beauty , nav > div.menubar > ul.mega > li > div.submenu > ul > li.home > div.home  , nav > div.menubar > ul.mega > li > div.submenu > ul > li.tahrir > div.tahrir , nav > div.menubar > ul.mega > li > div.submenu > ul > li.sport > div.sport {
+  width: 85%;
+  height: 500px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+nav > div.menubar > ul.mega > li > div.submenu > ul > li.mobile > div.mobile > div , nav > div.menubar > ul.mega > li > div.submenu > ul > li.digital > div.digital > div , nav > div.menubar > ul.mega > li > div.submenu > ul > li.tool > div.tool > div , nav > div.menubar > ul.mega > li > div.submenu > ul > li.shirt > div.shirt > div , nav > div.menubar > ul.mega > li > div.submenu > ul > li.super > div.super > div , nav > div.menubar > ul.mega > li > div.submenu > ul > li.kids > div.kids > div , nav > div.menubar > ul.mega > li > div.submenu > ul > li.product > div.product > div , nav > div.menubar > ul.mega > li > div.submenu > ul > li.beauty > div.beauty > div , nav > div.menubar > ul.mega > li > div.submenu > ul > li.home > div.home > div , nav > div.menubar > ul.mega > li > div.submenu > ul > li.tahrir > div.tahrir > div , nav > div.menubar > ul.mega > li > div.submenu > ul > li.sport > div.sport > div{
+  vertical-align: top;
+  width: 19.5%;
+  height: inherit;
+  display: none;
+}
+nav > div.menubar > ul.mega > li > div.submenu > ul > li.mobile > div.mobile > div.top , nav > div.menubar > ul.mega > li > div.submenu > ul > li.digital > div.digital > div.top , nav > div.menubar > ul.mega > li > div.submenu > ul > li.tool > div.tool > div.top , nav > div.menubar > ul.mega > li > div.submenu > ul > li.shirt > div.shirt > div.top , nav > div.menubar > ul.mega > li > div.submenu > ul > li.super > div.super > div.top , nav > div.menubar > ul.mega > li > div.submenu > ul > li.kids > div.kids > div.top , nav > div.menubar > ul.mega > li > div.submenu > ul > li.product > div.product > div.top , nav > div.menubar > ul.mega > li > div.submenu > ul > li.beauty > div.beauty > div.top , nav > div.menubar > ul.mega > li > div.submenu > ul > li.home > div.home > div.top , nav > div.menubar > ul.mega > li > div.submenu > ul > li.tahrir > div.tahrir > div.top , nav > div.menubar > ul.mega > li > div.submenu > ul > li.sport > div.sport > div.top{
+  all: unset;
+  width: inherit;
+  vertical-align: middle;
+  height: 60px;
+  margin-top: 10px;
+  background-color: var(--white);
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+nav > div.menubar > ul.mega > li > div.submenu > ul > li.mobile > div.mobile > div.top > a , nav > div.menubar > ul.mega > li > div.submenu > ul > li.digital > div.digital > div.top > a , nav > div.menubar > ul.mega > li > div.submenu > ul > li.tool > div.tool > div.top > a , nav > div.menubar > ul.mega > li > div.submenu > ul > li.shirt > div.shirt > div.top > a , nav > div.menubar > ul.mega > li > div.submenu > ul > li.super > div.super > div.top > a , nav > div.menubar > ul.mega > li > div.submenu > ul > li.kids > div.kids > div.top > a , nav > div.menubar > ul.mega > li > div.submenu > ul > li.product > div.product > div.top > a , nav > div.menubar > ul.mega > li > div.submenu > ul > li.beauty > div.beauty > div.top > a , nav > div.menubar > ul.mega > li > div.submenu > ul > li.home > div.home > div.top > a , nav > div.menubar > ul.mega > li > div.submenu > ul > li.tahrir > div.tahrir > div.top > a , nav > div.menubar > ul.mega > li > div.submenu > ul > li.sport > div.sport > div.top > a{
+  text-decoration: none;
+  color: #424750;
+  font-weight: bold;
+  font-size: 12px;
+}
+nav > div.menubar > ul.mega > li > div.submenu > ul > li.mobile:hover > div.mobile > div , nav > div.menubar > ul.mega > li > div.submenu > ul > li.digital:hover > div.digital > div , nav > div.menubar > ul.mega > li > div.submenu > ul > li.tool:hover > div.tool > div , nav > div.menubar > ul.mega > li > div.submenu > ul > li.shirt:hover > div.shirt > div , nav > div.menubar > ul.mega > li > div.submenu > ul > li.super:hover > div.super > div , nav > div.menubar > ul.mega > li > div.submenu > ul > li.kids:hover > div.kids > div , nav > div.menubar > ul.mega > li > div.submenu > ul > li.product:hover > div.product > div , nav > div.menubar > ul.mega > li > div.submenu > ul > li.beauty:hover > div.beauty > div , nav > div.menubar > ul.mega > li > div.submenu > ul > li.home:hover > div.home > div , nav > div.menubar > ul.mega > li > div.submenu > ul > li.tahrir:hover > div.tahrir > div , nav > div.menubar > ul.mega > li > div.submenu > ul > li.sport:hover > div.sport > div{
+  display: inline-block;
+}
+nav > div.menubar > ul.mega > li > div.submenu > ul > li.mobile:hover > div.mobile , nav > div.menubar > ul.mega > li > div.submenu > ul > li.digital:hover > div.digital , nav > div.menubar > ul.mega > li > div.submenu > ul > li.tool:hover > div.tool , nav > div.menubar > ul.mega > li > div.submenu > ul > li.shirt:hover > div.shirt , nav > div.menubar > ul.mega > li > div.submenu > ul > li.super:hover > div.super , nav > div.menubar > ul.mega > li > div.submenu > ul > li.kids:hover > div.kids , nav > div.menubar > ul.mega > li > div.submenu > ul > li.product:hover > div.product , nav > div.menubar > ul.mega > li > div.submenu > ul > li.beauty:hover > div.beauty , nav > div.menubar > ul.mega > li > div.submenu > ul > li.home:hover > div.home , nav > div.menubar > ul.mega > li > div.submenu > ul > li.tahrir:hover > div.tahrir , nav > div.menubar > ul.mega > li > div.submenu > ul > li.sport:hover > div.sport{
+  display: block;
+
+}
+nav > div.menubar > ul.mega > li > div.submenu > ul > li{
+  color: #424750;
+}
+nav > div.menubar > ul.mega > li > div.submenu > ul > li > div > div > ul > li{
+  list-style: none;
+}
+nav > div.menubar > ul.mega > li > div.submenu > ul > li > div > div > ul > li:not(.bold){
+  width: auto;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  margin-right: 13px;
+  color: var(--icon-grey);
+}
+nav > div.menubar > ul.mega > li > div.submenu > ul > li > div > div > ul > li.bold{
+  width: auto;
+  height: 35px;
+  line-height: 35px;
+  margin-right: 10px;
+  font-family: IranyekanB;
+  color: #252525;
+}
+nav > div.menubar > ul.mega > li > div.submenu > ul > li > div > div > ul > li.bold > span{
+  color: var(--digi-red);
+  margin-left: 2px;
+}
+nav > div.menubar > ul.mega > li > div.submenu > ul > li > div > div > ul > li:hover{
+  color: var(--digi-red);
+    transition: 1000ms;
+}
+
+/* Main menu */
+nav > div.menubar > ul.main {
+  display: inline-block;
+  vertical-align: top;
+  width: 59%;
+  height: inherit;
+  margin: 0 auto;
+  position: relative;
+  left: 35px;
+  list-style: none;
+  text-align: right;
+}
+nav > div.menubar > ul.main > li {
+  height: inherit;
+  width: auto;
+  display: inline-block;
+  padding: 0 12px;
+  transform: perspective(1px) translateZ(0);
+}
+nav > div.menubar > ul.main::after{
+  content: " ";
+  display: block;
+  background-color: var(--border-color);
+  width: 1px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 7px;
+}
+nav > div.menubar > ul.main > li:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: var(--digi-red);
+    height: 2px;
+    transition-property: right;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+nav > div.menubar > ul.main > li:hover:before, nav > div.menubar > ul.main > li:focus:before, nav > div.menubar > ul.main > li:active:before {
+    right: 0;
+  }
+nav > div.menubar > ul.main > li > a {
+  display: inline-block;
+  line-height: 40px;
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--placeholder-color);
+}
+nav > div.menubar > ul.main > li > a > span {
+  margin-left: 5px;
+  color: var(--icon-grey);
+}
+
+/* Location Select */
+
+
+nav > div.menubar > div.location {
+  display: inline-block;
+  width: 133.267px;
+  height: 36px;
+  line-height: 36px;
+  padding-bottom: 4px;
+  position: relative;
+  right: 387px;
+  color: #424750;
+  cursor: pointer;
+}
+nav > div.menubar > div.location > label{
+  cursor: pointer;
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+}
+nav > div.menubar > div.location > label > span{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin-left: 1.6px;
+  top: calc(50% - 20px / 2);
+}
+nav > div.menubar > div.location > label > span > img {
+  width: inherit;
+  height: inherit;
+}
+nav > div.menubar > div.location > label >div.ersal{
+  display: inline-block;
+  font-size: 12px;
+}
+nav > div.menubar > div.location > label > div.loc{
+  display: inline-block;
+  font-size: 12px;
+}
+nav > div.menubar > div.location > input[id="openloc"]{
+  display: none;
+}
